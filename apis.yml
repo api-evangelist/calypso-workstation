@@ -1,0 +1,165 @@
+name: Calypso Workstation
+description: APIs for Calypso Workstation - a comprehensive finance and trading platform providing access to market data, trading operations, risk management, and portfolio analytics
+image: https://example.com/calypso-logo.png
+url: https://www.calypso.com
+created: '2024-01-15'
+modified: '2024-01-15'
+apis:
+- name: Calypso Market Data API
+  description: Access real-time and historical market data including prices, rates, and market indicators
+  image: https://example.com/calypso-market-data-icon.png
+  humanURL: https://www.calypso.com/products/market-data
+  baseURL: https://api.calypso.com/v1/marketdata
+  tags:
+  - Market Data
+  - Pricing
+  - Real-time
+  - Historical Data
+  properties:
+  - type: Documentation
+    url: https://docs.calypso.com/api/market-data
+  - type: OpenAPI
+    url: https://api.calypso.com/v1/marketdata/openapi.json
+  - type: Authentication
+    url: https://docs.calypso.com/api/authentication
+  contact:
+  - FN: Calypso API Support
+    email: api-support@calypso.com
+    url: https://www.calypso.com/support
+- name: Calypso Trading API
+  description: Execute trades, manage orders, and access trade lifecycle management functionality
+  image: https://example.com/calypso-trading-icon.png
+  humanURL: https://www.calypso.com/products/trading
+  baseURL: https://api.calypso.com/v1/trading
+  tags:
+  - Trading
+  - Orders
+  - Execution
+  - Trade Lifecycle
+  properties:
+  - type: Documentation
+    url: https://docs.calypso.com/api/trading
+  - type: OpenAPI
+    url: https://api.calypso.com/v1/trading/openapi.json
+  - type: Authentication
+    url: https://docs.calypso.com/api/authentication
+  - type: Rate Limits
+    url: https://docs.calypso.com/api/rate-limits
+  contact:
+  - FN: Calypso API Support
+    email: api-support@calypso.com
+    url: https://www.calypso.com/support
+- name: Calypso Risk Management API
+  description: Access risk calculations, exposure metrics, VaR, stress testing, and risk reporting
+  image: https://example.com/calypso-risk-icon.png
+  humanURL: https://www.calypso.com/products/risk-management
+  baseURL: https://api.calypso.com/v1/risk
+  tags:
+  - Risk Management
+  - VaR
+  - Exposure
+  - Stress Testing
+  - Analytics
+  properties:
+  - type: Documentation
+    url: https://docs.calypso.com/api/risk
+  - type: OpenAPI
+    url: https://api.calypso.com/v1/risk/openapi.json
+  - type: Authentication
+    url: https://docs.calypso.com/api/authentication
+  contact:
+  - FN: Calypso API Support
+    email: api-support@calypso.com
+    url: https://www.calypso.com/support
+- name: Calypso Portfolio API
+  description: Manage portfolios, access positions, performance metrics, and portfolio analytics
+  image: https://example.com/calypso-portfolio-icon.png
+  humanURL: https://www.calypso.com/products/portfolio-management
+  baseURL: https://api.calypso.com/v1/portfolio
+  tags:
+  - Portfolio Management
+  - Positions
+  - Performance
+  - Analytics
+  properties:
+  - type: Documentation
+    url: https://docs.calypso.com/api/portfolio
+  - type: OpenAPI
+    url: https://api.calypso.com/v1/portfolio/openapi.json
+  - type: Authentication
+    url: https://docs.calypso.com/api/authentication
+  contact:
+  - FN: Calypso API Support
+    email: api-support@calypso.com
+    url: https://www.calypso.com/support
+- name: Calypso Reference Data API
+  description: Access and manage reference data including instruments, counterparties, legal entities, and static data
+  image: https://example.com/calypso-reference-icon.png
+  humanURL: https://www.calypso.com/products/reference-data
+  baseURL: https://api.calypso.com/v1/refdata
+  tags:
+  - Reference Data
+  - Static Data
+  - Instruments
+  - Counterparties
+  properties:
+  - type: Documentation
+    url: https://docs.calypso.com/api/reference-data
+  - type: OpenAPI
+    url: https://api.calypso.com/v1/refdata/openapi.json
+  - type: Authentication
+    url: https://docs.calypso.com/api/authentication
+  contact:
+  - FN: Calypso API Support
+    email: api-support@calypso.com
+    url: https://www.calypso.com/support
+- name: Calypso Reporting API
+  description: Generate and access financial reports, regulatory reports, and custom analytics
+  image: https://example.com/calypso-reporting-icon.png
+  humanURL: https://www.calypso.com/products/reporting
+  baseURL: https://api.calypso.com/v1/reporting
+  tags:
+  - Reporting
+  - Analytics
+  - Regulatory
+  - Financial Reports
+  properties:
+  - type: Documentation
+    url: https://docs.calypso.com/api/reporting
+  - type: OpenAPI
+    url: https://api.calypso.com/v1/reporting/openapi.json
+  - type: Authentication
+    url: https://docs.calypso.com/api/authentication
+  contact:
+  - FN: Calypso API Support
+    email: api-support@calypso.com
+    url: https://www.calypso.com/support
+common:
+- type: Getting Started
+  url: https://docs.calypso.com/getting-started
+- type: Authentication
+  url: https://docs.calypso.com/api/authentication
+- type: SDKs
+  url: https://docs.calypso.com/sdks
+- type: Status Page
+  url: https://status.calypso.com
+- type: Terms of Service
+  url: https://www.calypso.com/terms
+- type: Privacy Policy
+  url: https://www.calypso.com/privacy
+- type: Support
+  url: https://www.calypso.com/support
+- type: Contact
+  url: https://www.calypso.com/contact
+maintainers:
+- FN: Calypso Technology
+  email: api-team@calypso.com
+  url: https://www.calypso.com
+tags:
+- Finance
+- Trading
+- Risk Management
+- Capital Markets
+- Treasury
+- Portfolio Management
+- Market Data
