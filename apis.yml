@@ -4,9 +4,9 @@ url: >-
 name: Calypso Workstation
 tags:
   - Capital Markets
-  - Trading
-  - Risk Management
   - Financial Technology
+  - Risk Management
+  - Trading
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
@@ -23,8 +23,8 @@ apis:
     name: Calypso Workstation
     tags:
       - Capital Markets
-      - Trading
       - Risk Management
+      - Trading
     humanURL: https://www.nasdaq.com/solutions/fintech/nasdaq-calypso
     properties:
       - url: https://www.nasdaq.com/solutions/fintech/nasdaq-calypso
