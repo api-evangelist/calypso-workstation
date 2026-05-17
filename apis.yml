@@ -50,9 +50,9 @@ common:
     url: https://www.calypso.com/
   - type: Portal
     url: https://www.nasdaq.com/solutions/fintech/nasdaq-calypso
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://www.calypso.com/Privacy
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://km.calypso.com/pages/terms
   - type: Learning
     url: https://learncalypso.nasdaq.com/
