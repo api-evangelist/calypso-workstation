@@ -46,6 +46,8 @@ apis:
       public API; system-to-system integration is typically performed through
       Calypso's core platform interfaces.
 common:
+  - type: DomainSecurity
+    url: security/calypso-workstation-domain-security.yml
   - type: Website
     url: https://www.calypso.com/
   - type: Portal
