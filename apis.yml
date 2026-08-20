@@ -6,6 +6,13 @@ tags:
   - Capital Markets
   - Financial Technology
   - Market Data
+  - Portfolio-Management
+  - Risk Management
+  - Trading
+tags_raw:
+  - Capital Markets
+  - Financial Technology
+  - Market Data
   - Portfolio Management
   - Risk Management
   - Trading
@@ -40,6 +47,11 @@ apis:
   - aid: calypso-workstation:calypso-workstation
     name: Calypso Workstation
     tags:
+      - Capital Markets
+      - Portfolio-Management
+      - Risk Management
+      - Trading
+    tags_raw:
       - Capital Markets
       - Portfolio Management
       - Risk Management
