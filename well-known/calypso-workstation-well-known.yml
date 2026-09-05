@@ -1,0 +1,113 @@
+generated: '2026-09-05'
+method: probed
+source: live GET of the named /.well-known/ paths on every host this record knows
+provider: Calypso Workstation
+providerId: calypso-workstation
+description: >-
+  Well-known discovery document probe for Nasdaq Calypso Workstation. Every host
+  the record knows was probed for the named RFC/convention paths. Nothing that
+  belongs to Calypso is served. The only 200 responses are Thinkific's OpenID
+  Connect configuration surfaced under two Nasdaq learning-platform vanity
+  hostnames — recorded here for completeness, but NOT treated as a Calypso
+  discovery surface (see notes).
+pointer_note: >-
+  No WellKnown or SecurityTxt pointer is wired into apis.yml from this file. The
+  two 200s are the Thinkific LMS vendor's own OIDC metadata (issuer
+  https://courses.thinkific.com) exposed through the learncalypso.nasdaq.com and
+  calypsoeducation.nasdaq.com CNAMEs, which resolve to
+  calypso-university.thinkific.com / km-internal.thinkific.com. They describe the
+  course-platform login, not any Calypso or Nasdaq API. Emitting a pointer would
+  credit Calypso Workstation with an agent-discoverable auth surface it does not
+  operate.
+hosts:
+  - host: www.nasdaq.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: nasdaq.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: learncalypso.nasdaq.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: calypso-workstation-learncalypso-openid-configuration.json
+        note: >-
+          Third-party document. issuer is https://courses.thinkific.com; the
+          authorization/token/userinfo endpoints sit on this vanity host but the
+          provider of the identity service is Thinkific, the learning-platform
+          vendor. Not a Calypso API surface.
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: calypsoeducation.nasdaq.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: calypso-workstation-calypsoeducation-openid-configuration.json
+        note: >-
+          Same Thinkific LMS OIDC document as learncalypso.nasdaq.com; issuer
+          https://courses.thinkific.com. Not a Calypso API surface.
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: calypso.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 0
+        note: >-
+          Connection times out on both 80 and 443. calypso.com resolves to
+          72.167.45.186 but serves nothing; the domain is effectively dark since
+          the Nasdaq acquisition.
+      - path: /.well-known/openid-configuration
+        status: 0
+      - path: /.well-known/oauth-authorization-server
+        status: 0
+      - path: /.well-known/api-catalog
+        status: 0
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

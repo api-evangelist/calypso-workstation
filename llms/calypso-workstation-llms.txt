@@ -1,0 +1,62 @@
+# Calypso Workstation (Nasdaq Calypso)
+
+> Calypso Workstation is the user-facing desktop component of the Nasdaq Calypso
+> capital markets platform (formerly Adenza / Calypso Technology, acquired by
+> Nasdaq, Inc. in 2023). It gives trading, risk and portfolio teams real-time
+> market data, trade entry, order management, risk and P&L monitoring, scenario
+> analysis and portfolio analytics across asset classes. It is an integrated
+> client application, not a publicly documented API.
+
+## Status for agents
+
+- **No public API.** No OpenAPI, Swagger, GraphQL SDL, AsyncAPI, gRPC/Protobuf or
+  WSDL contract is published at any reachable Nasdaq or Calypso host.
+- **No developer portal, no API reference, no SDKs, no CLI, no MCP server, no
+  A2A agent card.** All probed and absent as of 2026-09-05.
+- **No self-service sign-up and no published pricing.** Enterprise, contract
+  negotiated; the only commercial route is a contact-sales form.
+- **Technical documentation is customer-gated.** It sits behind the Nasdaq
+  Customer Portal, which is Okta-authenticated.
+- **calypso.com is dark.** The pre-acquisition domain resolves but serves nothing
+  on port 80 or 443. Every live surface is now under nasdaq.com.
+
+There is nothing here an agent can call. Programmatic integration with the
+Calypso platform is delivered to licensed customers through platform interfaces
+described in customer-only documentation.
+
+## Product
+
+- [Nasdaq Calypso](https://www.nasdaq.com/products/fintech/calypso): platform
+  overview — trading, risk management, collateral, treasury, processing and
+  accounting for banks, asset managers, central banks and clearing houses.
+- [Nasdaq Calypso Front Office](https://www.nasdaq.com/products/fintech/calypso/front-office):
+  the Front Office and Portfolio Management Workstations — real-time desk risk,
+  positions and market data, cross-asset analytics, configurable dashboards.
+- [Calypso Resources](https://www.nasdaq.com/products/fintech/calypso/resources):
+  briefs, case studies and other product collateral.
+
+## Access and support
+
+- [Contact Nasdaq](https://www.nasdaq.com/contact-us): the sales and support route.
+- [Nasdaq Customer Portal](https://customerportal.nasdaq.com/auth/login):
+  customer-only; Okta login. Client resources redirect here.
+- [Calypso Learning Services](https://learncalypso.nasdaq.com/): training
+  catalogue for the platform, including Front Office Workstation courses.
+- [Calypso Education](https://calypsoeducation.nasdaq.com/): course platform
+  (Thinkific-hosted).
+
+## Trust, security and legal
+
+- [Nasdaq Trust Center](https://www.nasdaq.com/trust-center): GDPR programme,
+  per-entity Privacy Letters, corporate privacy programme. No named third-party
+  certification is published on it.
+- [Nasdaq Vulnerability Disclosure Policy](https://hackerone.com/nasdaq):
+  the disclosure route. No RFC 9116 security.txt is served on any host.
+- [Nasdaq Privacy Statement](https://www.nasdaq.com/privacy-statement)
+- [Nasdaq Legal Information](https://www.nasdaq.com/legal): terms of service.
+
+## Provenance
+
+Generated 2026-09-05 by the API Evangelist enrichment pipeline from this repo's
+apis.yml and artifacts, plus live probes of the hosts named above. This is a
+third-party profile; it is not published by Nasdaq, Inc.

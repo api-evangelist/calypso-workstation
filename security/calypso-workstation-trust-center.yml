@@ -1,0 +1,46 @@
+generated: '2026-09-05'
+method: searched
+source: https://www.nasdaq.com/trust-center
+provider: Calypso Workstation
+providerId: calypso-workstation
+description: >-
+  Trust and compliance posture published for Nasdaq Calypso Workstation. The
+  product has no trust page of its own; the applicable published surface is the
+  Nasdaq, Inc. Trust Center, reachable from the footer of every
+  www.nasdaq.com page including the Calypso product pages.
+ownership_note: >-
+  Parent-brand attribution. Calypso Technology was acquired by Adenza and Adenza
+  by Nasdaq, Inc. in 2023. calypso.com no longer resolves and the product is
+  published at www.nasdaq.com/products/fintech/calypso, so the Nasdaq corporate
+  trust surface is the one that governs it.
+trust_center:
+  url: https://www.nasdaq.com/trust-center
+  title: Nasdaq Trust Center
+  x-evidence:
+    fetched: '2026-09-05'
+    url: https://www.nasdaq.com/trust-center
+    http_status: 200
+compliance_programs:
+  - name: General Data Protection Regulation (GDPR)
+    kind: regulation
+    status: published-commitment
+    evidence: https://www.nasdaq.com/trust-center
+    note: >-
+      The Trust Center states a GDPR compliance commitment and links per-entity
+      Privacy Letters for the regulated European businesses (Nasdaq Nordic and
+      Baltic Exchanges, Nasdaq Clearing AB, Nasdaq CSD SE and AS, Pensionikeskus)
+      plus the corporate Nasdaq Privacy Policy.
+  - name: Nasdaq Privacy Policy
+    kind: policy
+    status: published
+    evidence: https://www.nasdaq.com/privacy-statement
+certifications: []
+certifications_note: >-
+  No named third-party certification (SOC 2, ISO 27001, PCI DSS, HIPAA,
+  FedRAMP) is asserted anywhere on the Trust Center page as fetched on
+  2026-09-05. Recorded as an honest empty list rather than assumed from the
+  sector — a capital markets vendor of this size very likely holds attestations,
+  but they are not published at a public URL we could read.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

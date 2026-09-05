@@ -67,11 +67,11 @@ apis:
       - Portfolio Management
       - Risk Management
       - Trading
-    humanURL: https://www.nasdaq.com/solutions/fintech/nasdaq-calypso
+    humanURL: https://www.nasdaq.com/products/fintech/calypso
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     properties:
-      - url: https://www.nasdaq.com/solutions/fintech/nasdaq-calypso
-        type: Documentation
+      - url: https://www.nasdaq.com/products/fintech/calypso/front-office
+        type: Website
     description: >-
       Calypso Workstation is the end-user desktop application for the Nasdaq
       Calypso platform. It delivers real-time market data, trade entry, order
@@ -84,16 +84,54 @@ common:
   - type: DomainSecurity
     url: security/calypso-workstation-domain-security.yml
   - type: Website
-    url: https://www.calypso.com/
-  - type: Portal
-    url: https://www.nasdaq.com/solutions/fintech/nasdaq-calypso
+    url: https://www.nasdaq.com/products/fintech/calypso
   - type: PrivacyPolicy
-    url: https://www.calypso.com/Privacy
+    url: https://www.nasdaq.com/privacy-statement
   - type: TermsOfService
-    url: https://km.calypso.com/pages/terms
+    url: https://www.nasdaq.com/legal
+  - type: Support
+    url: https://www.nasdaq.com/contact-us
+  - type: TrustCenter
+    url: https://www.nasdaq.com/trust-center
+  - type: Compliance
+    url: security/calypso-workstation-trust-center.yml
+  - type: Security
+    url: security/calypso-workstation-vulnerability-disclosure.yml
+  - type: VulnerabilityDisclosure
+    url: security/calypso-workstation-vulnerability-disclosure.yml
   - type: Learning
     url: https://learncalypso.nasdaq.com/
+  - type: LLMsTxt
+    url: llms/calypso-workstation-llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 specificationVersion: '0.23'
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v3
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    Nasdaq publishes no API reference for Calypso at all — the product and Front
+    Office Workstation pages contain zero mentions of an API — and the Calypso
+    technical documentation reachable from them lives in the Okta-authenticated
+    Nasdaq Customer Portal, where /client/resources 302s to /auth/login; the
+    pre-acquisition calypso.com domain that once carried the developer surface
+    now resolves to 72.167.45.186 and times out on both 80 and 443.
+  evidence:
+    - url: https://customerportal.nasdaq.com/client/resources
+      status: 302
+    - url: https://www.nasdaq.com/products/fintech/calypso
+      status: 200
+    - url: https://www.nasdaq.com/openapi.json
+      status: 404
+    - url: https://www.calypso.com/
+      status: 0
+  checked: '2026-09-05'
+x-parent: nasdaq-omx-group
+x-relationship: acquisition
+x-acquired: 2021

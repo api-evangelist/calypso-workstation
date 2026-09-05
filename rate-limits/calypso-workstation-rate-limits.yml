@@ -4,10 +4,10 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Calypso Workstation
 providerId: calypso-workstation
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
+modified: '2026-09-05'
+generated: '2026-09-05'
+method: searched
+source: https://www.nasdaq.com/products/fintech/calypso
 tags:
   - Capital Markets
   - Financial Technology
@@ -16,78 +16,35 @@ tags:
   - Risk Management
   - Trading
   - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the Calypso Workstation API surface. Captures
-  per-tier quotas, burst behavior, response signaling, and recovery semantics. Defaults are scaffold values
-  to be replaced with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
-responseCodes:
-  throttled: 429
-  quotaExceeded: 429
-  serviceUnavailable: 503
-limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - Calypso Workstation
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
-    timeFrame: month
-    applies:
-      - Calypso Workstation
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - Calypso Workstation
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - Calypso Workstation
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
-    scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
-    applies:
-      - Calypso Workstation
-policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+description: >-
+  Published rate limits for Nasdaq Calypso Workstation. There are none. Calypso
+  Workstation is the desktop client of an enterprise, customer-deployed capital
+  markets platform; no public API host, no public API reference, and therefore
+  no published quota, window, burst ceiling, throttling status code or
+  RateLimit/X-RateLimit response header could be found on any Nasdaq or Calypso
+  host.
+limit_count: 0
+limits: []
+headers: {}
+responseCodes: {}
+policies: []
+note: >-
+  This file previously carried free/professional/enterprise tiers with invented
+  requests-per-minute and monthly quotas plus a full X-RateLimit-* header set,
+  written by the 2026-05-04 bulk sweep and stamped method:generated. The
+  provider publishes none of that. Replaced with the measured zero. Any real
+  limits would be contractual and would reach a customer through the Nasdaq
+  Customer Portal, which is Okta-gated.
+x-evidence:
+  - url: https://www.nasdaq.com/products/fintech/calypso
+    status: 200
+    note: No API reference, no limits.
+  - url: https://www.nasdaq.com/products/fintech/calypso/front-office
+    status: 200
+    note: No API reference, no limits.
+  - url: https://customerportal.nasdaq.com/client/resources
+    status: 200
+    note: Redirects to https://customerportal.nasdaq.com/auth/login — customer-only.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
