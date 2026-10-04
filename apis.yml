@@ -6,7 +6,7 @@ tags:
   - Capital Markets
   - Financial Technology
   - Market Data
-  - Portfolio-Management
+  - Portfolio Management
   - Risk Management
   - Trading
 tags_raw:
@@ -16,6 +16,7 @@ tags_raw:
   - Portfolio Management
   - Risk Management
   - Trading
+  - Portfolio-Management
 type: Index
 deliveryModel:
   model: saas
@@ -59,7 +60,7 @@ apis:
     name: Calypso Workstation
     tags:
       - Capital Markets
-      - Portfolio-Management
+      - Portfolio Management
       - Risk Management
       - Trading
     tags_raw:
@@ -67,6 +68,7 @@ apis:
       - Portfolio Management
       - Risk Management
       - Trading
+      - Portfolio-Management
     humanURL: https://www.nasdaq.com/products/fintech/calypso
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     properties:
